@@ -14,7 +14,7 @@
     <style>
 
         .text-center {
-  text-align: center;
+           text-align: center;
 }
 
 .button4 {font-size: 20px;}
@@ -22,38 +22,44 @@
 body {
  background-color: #cccccc;
 }
+
+.predictionResults{
+    color:#008000;
+}
+
+.mandatory{
+color:#FF0000;
+}
     </style>
 
 </head>
 <body>
 
 <div class="container">
-
+<div class="row">
+    <div class="col">
     <form action="{{ url_for('predict')}}" method="post">
-        <br><br>
+        <br>
         <h1 class="text-center">Car Price Prediction</h1>
-        <br><br>
+        <br>
         <div class="form-group">
-            <h3>Year</h3>
-            <input id="first" class="form-control" name="Year" type="number ">
+            <h3>Car Year Model ?<span class="mandatory">*</span></h3>
+            <input id="first" class="form-control" name="Year" type="number " maxlength = "7" minlength = "1" pattern = "^[0-9]+$">
         </div>
         <div class="form-group">
-            <h3>What is the Showroom Price?(In lakhs)</h3>
-            <br>
-            <input id="second" class="form-control" name="Present_Price" required="required">
+            <h3>Showroom Price (In lakhs) ? Ex: 6 <span class="mandatory">*</span> </h3>
+            <input id="second" class="form-control" name="Present_Price" type="number " maxlength = "4" minlength = "1" pattern = "^[0-9]+$" required="required">
         </div>
         <div class="form-group">
-            <h3>How Many Kilometers Drived?</h3>
-            <input id="third" class="form-control" name="Kms_Driven" required="required">
+            <h3>Kilometers Driven ?<span class="mandatory">*</span></h3>
+            <input id="third" class="form-control" name="Kms_Driven" type="number " maxlength = "7" minlength = "1" pattern = "^[0-9]+$" required="required">
         </div>
         <div class="form-group">
-            <h3>How much owners previously had the car(0 or 1 or 3) ?</h3>
-            <br>
-            <input id="fourth" class="form-control" name="Owner" required="required">
+            <h3>Owners previously had the car ? Ex: 1 <span class="mandatory">*</span></h3>
+            <input id="fourth" class="form-control" name="Owner" type="number " maxlength = "1" minlength = "1" pattern = "^[0-9]$" required="required">
         </div>
         <div class="form-group">
-            <h3>What Is the Fuel type?</h3>
-            <br>
+            <h3>Fuel type ?<span class="mandatory">*</span></h3>
             <select name="Fuel_Type_Petrol" id="fuel" class="form-control" required="required">
                 <option value="Petrol">Petrol</option>
                 <option value="Diesel">Diesel</option>
@@ -61,33 +67,32 @@ body {
             </select>
         </div>
         <div class="form-group">
-            <h3>Are you A Dealer or Individual</h3>
-            <br>
+            <h3>Dealer or Individual ?<span class="mandatory">*</span></h3>
             <select name="Seller_Type_Individual" class="form-control" id="resea" required="required">
                 <option value="Dealer">Dealer</option>
                 <option value="Individual">Individual</option>
             </select>
         </div>
         <div class="form-group">
-            <h3>Transmission type</h3>
-            <br>
+            <h3>Transmission type ?<span class="mandatory">*</span></h3>
             <select name="Transmission_Mannual" id="research" class="form-control" required="required">
                 <option value="Mannual">Manual Car</option>
                 <option value="Automatic">Automatic Car</option>
             </select>
-            <br><br>
+            <br>
         </div>
         <div class="form-group">
             <button id="sub" class="btn btn-success text-center button4" type="submit ">Predict</button>
         </div>
-        <br>
 
     </form>
-    <br><br>
-<h2>{{ prediction_text }}<h2>
+    </div>
+    <div class="col">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h2 class="predictionResults">{{ prediction_text }}</h2>
 </div>
-
-
+</div>
+</div>
 
 </body>
 </html>
