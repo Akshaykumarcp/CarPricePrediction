@@ -1,0 +1,42 @@
+certifi==2020.6.20
+chardet==3.0.4
+click==7.1.2
+cycler==0.10.0
+idna==2.10
+imbalanced-learn==0.7.0
+imblearn==0.0
+joblib @ file:///tmp/build/80754af9/joblib_1594236160679/work
+kiwisolver==1.2.0
+lxml==4.5.2
+matplotlib @ file:///C:/ci/matplotlib-base_1597876438601/work
+mkl-fft==1.1.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+mlxtend==0.17.3
+nltk==3.5
+numpy @ file:///C:/ci/numpy_and_numpy_base_1596215850360/work
+olefile==0.46
+pandas @ file:///C:/ci/pandas_1598371563714/work
+pandas-datareader==0.9.0
+patsy==0.5.1
+Pillow @ file:///C:/ci/pillow_1594298230227/work
+pyparsing==2.4.7
+python-dateutil==2.8.1
+pytz==2020.1
+RadViz-Plotly==0.0.4
+regex==2020.7.14
+requests==2.24.0
+scikit-learn @ file:///C:/ci/scikit-learn_1598377018496/work
+scipy @ file:///C:/ci/scipy_1592916963468/work
+seaborn==0.10.1
+sip==4.19.13
+six==1.15.0
+sklearn==0.0
+statsmodels==0.12.0
+threadpoolctl @ file:///tmp/tmp9twdgx9k/threadpoolctl-2.1.0-py3-none-any.whl
+tornado==6.0.4
+tqdm==4.48.2
+urllib3==1.25.10
+wincertstore==0.2
+xgboost==1.2.0
+xlrd==1.2.0
